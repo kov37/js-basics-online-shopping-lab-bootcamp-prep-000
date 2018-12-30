@@ -10,7 +10,11 @@ function setCart(c) {
 }
 
 function addToCart(item) {
+<<<<<<< HEAD
   var price = Math.floor(Math.random() * 100 + 1)
+=======
+  var price = Math.floor(Math.random() * 100)
+>>>>>>> c700b3f516143a6ddeaae00d07cfdfd189856cc3
   cart.push({itemName: item, itemPrice: price})
   return `${item} has been added to your cart.`
 }
@@ -20,9 +24,15 @@ function viewCart() {
     return "Your shopping cart is empty."
   var currentCart = "In your cart, you have";
   if (cart.length === 1)
+<<<<<<< HEAD
     return currentCart + ` ${cart[0].itemName} at $${cart[0].itemPrice}.`
   for (var i = 0; i < cart.length; i++){
     currentCart += `${i === cart.length - 1 ? ' and': ''} ${cart[i].itemName} at $${cart[i].itemPrice}${cart.length - 1 === i ? '.': ','}`;
+=======
+    return currentCart + ` ${cart[i].itemName} at $${cart[i].itemPrice}.`
+  for (var i = 0; i < cart.length; i++){
+    currentCart += `${i === cart.length - 1 ? 'and': ''} ${cart[i].itemName} at $${cart[i].itemPrice}${cart.length === length - 1 ? '.': ','}`;
+>>>>>>> c700b3f516143a6ddeaae00d07cfdfd189856cc3
   }
   return currentCart;
 }
